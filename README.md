@@ -3,6 +3,6 @@
 
 This is an opensource project.
 
-Languages we accept: C++, Python, HTML/CSS/JS, Java, JavaScript.
+Languages we accept: C++, Python, HTML/CSS/JS, Java, JavaScript, any other cool stuff you folks want to add :D
 
 Please check out CONTRIBUTING.md
