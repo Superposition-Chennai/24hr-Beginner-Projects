@@ -1,0 +1,130 @@
+.container {
+  width: 300px;
+  height: 400px;
+  background-image: linear-gradient(
+    to right top,
+    #3684f8,
+    #00a7ff,
+    #1ec5ff,
+    #6ddfff,
+    #acf7ff
+  );
+  transition: all 0.3s ease-in-out;
+color:black;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2px 4px;
+}
+
+.main {
+  margin: 0;
+  background-color: #c6eaf9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  flex-direction: column;
+  transition: all 0.6s ease-in-out;
+}
+
+.container img {
+  height: 75px;
+  width: 75px;
+}
+
+.back {
+  background-image: linear-gradient(
+    to right top,
+    #70a8fc,
+    #4ebcf7,
+    #1ec5ff,
+    #6ddfff,
+    #acf7ff
+  );
+
+  border-bottom-left-radius: 50% 40%;
+  border-bottom-right-radius: 50% 40%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clear-container {
+  background-image: linear-gradient(
+    to right top,
+    #f8e736,
+    #ffcf54,
+    #ffbc75,
+    #ffb094,
+    #ffacac
+  );
+}
+
+.dark-container {
+  background-image: linear-gradient(
+    to right top,
+    #23231b,
+    #32322a,
+    #41413a,
+    #51514a,
+    #62625b
+  );
+color:white;
+
+}
+
+.elements {
+  flex: 0 0 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 3px;
+}
+.info {
+  font-size: 1.2rem;
+}
+.p {
+  font-size: 0.8rem;
+}
+.row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.temp {
+  font-size: 2rem;
+}
+
+.msg {
+  width: 193px;
+  text-align: center;
+}
+
+.dark {
+  background-color: black;
+}
+.button {
+  margin: 12px 10px;
+  padding: 7px 10px;
+  border-radius: 5px;
+}
+.toggle {
+  background: #999595;
+  color: white;
+  border: 1px solid black;
+}
+
+.toggle-light {
+  background: rgb(0, 100, 139);
+  color: #fdf2f2;
+  border: 1px solid rgb(7, 93, 128);
+}

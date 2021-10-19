@@ -1,0 +1,130 @@
+.button {
+  padding: 10px 10px;
+  margin: 0px 10px;
+
+  background-color: rgb(0, 183, 207);
+  color: white;
+  border-radius: 5px;
+}
+
+.input {
+  background-color: rgb(87, 229, 248);
+  padding: 20px 10px;
+  width: 75vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 10px;
+  border-radius: 10px;
+  box-shadow: 5px 8px 12px 6px rgba(0, 0, 0, 0.75);
+}
+.input input {
+  width: 50%;
+  padding: 10px 10px;
+  margin: 0px 10px;
+  border-radius: 10px;
+}
+.input input:active {
+  outline: none;
+}
+
+.list-item {
+  border: 1px solid black;
+  height: 60px;
+  padding: 10px 20px;
+  margin: 7px 10px;
+  background-color: rgb(70, 217, 253);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.list-item h3 {
+  height: 100%;
+}
+.lists-container {
+  box-shadow: 5px 8px 12px 6px rgba(0, 0, 0, 0.75);
+  padding: 10px 1px;
+  margin: 10px 12px;
+  display: flex;
+  max-height: 500px;
+  overflow-y: auto;
+  border-radius: 10px;
+  background-color: rgb(0, 255, 255);
+}
+.lists {
+  list-style: none;
+  padding: 5px 3px;
+}
+
+.lists p {
+  text-align: center;
+  font-size: 1.3rem;
+}
+.message {
+  color: rgb(248, 89, 89);
+  font-size: 1rem;
+}
+.deletebtn {
+  padding: 10px 15px;
+  color: white;
+  border-radius: 10px;
+  background-color: rgb(245, 43, 43);
+}
+
+.error {
+  color: red;
+  padding: 7px 9px;
+  margin: 7px 2px;
+  width:100%;
+  height:400px;
+  font-weight: 300;
+  font-size: 1.4rem;
+  height: 50px;
+  text-align: center;
+}
+
+.lists-todo {
+  flex: 0 0 50%;
+}
+.lists-complete {
+  flex: 0 0 50%;
+}
+.btns {
+  width: 50%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.completed {
+  padding: 10px 15px;
+  color: white;
+  border-radius: 10px;
+  background-color: rgb(129, 241, 129);
+}
+::-webkit-scrollbar {
+  width: 1.2rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(0, 147, 184);
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+  .list-item {
+    height: 150px;
+  }
+  .btns {
+    flex-direction: column;
+  }
+  .deletebtn {
+    margin: 7px 0px;
+  }
+}
