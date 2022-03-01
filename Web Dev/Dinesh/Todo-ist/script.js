@@ -262,6 +262,60 @@ if (darkMode === 'enabled') {
     enableDarkMode();
 }
 
+// Dark mode functionality to be turned on automatically if the time is night (above 7:00 pm) 
+// But this is only for first visit , the time of his visit decides the darkmode enability. For next visits , the value in localStorage would decide the darkmode enability.
+
+// store frequency_of_visit and last_visit_time ,
+
+let user_visited_freq = localStorage.getItem('user_visited_freq');
+
+const _date = new Date();
+let cur_time = Math.ceil(_date.getTime()/1000);
+
+if (user_visited_freq === null)   
+{
+	// first time user
+	
+	localStorage.setItem('user_visited_freq' ,1);
+	localStorage.setItem('last_visit_time' ,cur_time);
+	
+	//check for night time -> dark sky 
+	
+	if (_date.getHours()>=19 || _date.getHours()<=5)
+	{
+		console.log("Automatic Dark Mode");
+		enableDarkMode();		
+	}
+	
+}else{
+	
+	// increment the number of visits !!!
+	// but increment needs to be done only when the user visits the webpage after a long time span
+	
+	var time_span = 5;	// 5 minutes
+	
+	let last_visit_time = parseInt(localStorage.getItem('last_visit_time'));
+	
+	if ((cur_time - last_visit_time) >= time_span * 60)
+	{
+		user_visited_freq = parseInt(user_visited_freq) + 1;    // increment visit frequency
+		
+		localStorage.setItem('user_visited_freq',user_visited_freq);
+		localStorage.setItem('last_visit_time' ,cur_time);
+	}
+	else{
+		console.log("You have just visited now! so no increment in user_visited_freq !",);
+	}
+}
+
+// for user visiting every 100 times , give a appreciation!
+
+if(user_visited_freq%100 == 0 && user_visited_freq>0)
+{
+	alert("great ! keep going until you become a star");	
+}
+
+
 toggler.forEach(tog => {
     tog.addEventListener('click', () => {
         darkMode = localStorage.getItem('darkMode');
